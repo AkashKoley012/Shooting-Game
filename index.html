@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Canvas Game</title>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <style>
+            * {
+                margin: 0;
+            }
+            body {
+                overflow: hidden;
+                background-color: black;
+            }
+            .score {
+                position: fixed;
+                color: white;
+                margin: 1rem;
+                user-select: none;
+            }
+            .modal {
+                position: fixed;
+                max-width: 100vw;
+                inset: 0;
+            }
+            .bg-white {
+                background-color: white;
+                padding: 1rem;
+                line-height: normal;
+                width: 80%;
+                flex-direction: column;
+            }
+            .model-score {
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+            .points {
+                color: gray;
+                font-size: 1.2rem;
+                margin: 1rem;
+            }
+            .btn {
+                width: 20rem;
+                height: 3rem;
+                border-radius: 10px;
+                border: none;
+                background: deepskyblue;
+                color: white;
+            }
+            .flex {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="score"><span>Score: </span><span id="score">0</span></div>
+        <div class="modal flex" id="modal">
+            <div class="bg-white flex">
+                <h1 class="model-score" id="modal-score">0</h1>
+                <p class="points">Points</p>
+                <div>
+                    <button class="btn" id="startGameBtn">Start Game</button>
+                </div>
+            </div>
+        </div>
+        <canvas></canvas>
+    </body>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="Class.js"></script>
+    <script src="index.js"></script>
+    <script src="Event.js"></script>
+</html>
